@@ -4,17 +4,17 @@ Welcome to ["The Internals Of" Online Books](https://github.com/japila-books) pr
 
 I'm [Jacek Laskowski](https://pl.linkedin.com/in/jaceklaskowski), an IT freelancer specializing in [Apache Spark](https://spark.apache.org/), [Delta Lake](https://delta.io/) and [Apache Kafka](https://kafka.apache.org/) (with brief forays into a wider data engineering space, e.g. [Trino](https://trino.io/) and [ksqlDB](https://ksqldb.io/), mostly during [Warsaw Data Engineering](https://www.meetup.com/Warsaw-Data-Engineering/) meetups).
 
-I'm very excited to have you here and hope you will enjoy exploring the internals of the following open source projects together:
+I'm very excited to have you here and hope you will enjoy exploring the internals of the open source projects together (in no particular order):
 
-* [Apache Spark](https://books.japila.pl/apache-spark-internals)
-* [Spark SQL](https://jaceklaskowski.github.io/mastering-spark-sql-book/)
-* [Spark Structured Streaming](https://jaceklaskowski.github.io/spark-structured-streaming-book/)
-* [Delta Lake](https://books.japila.pl/delta-lake-internals)
-* [Spark on Kubernetes](https://jaceklaskowski.github.io/spark-kubernetes-book/)
-* [PySpark](https://books.japila.pl/pyspark-internals)
-* [Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/content/)
-* [Kafka Streams](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/content/)
-* [Apache Beam](https://books.japila.pl/apache-beam-internals)
+1. [Apache Spark](https://books.japila.pl/apache-spark-internals)
+1. [Spark SQL](https://jaceklaskowski.github.io/mastering-spark-sql-book/)
+1. [Spark Structured Streaming](https://jaceklaskowski.github.io/spark-structured-streaming-book/)
+1. [Delta Lake](https://books.japila.pl/delta-lake-internals)
+1. [Spark on Kubernetes](https://jaceklaskowski.github.io/spark-kubernetes-book/)
+1. [PySpark](https://books.japila.pl/pyspark-internals)
+1. [Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/content/)
+1. [Kafka Streams](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/content/)
+1. [Apache Beam](https://books.japila.pl/apache-beam-internals)
 
 Please note that some books have less current content than others, but that's expected with a one-person project where some many things are so interesting and thus time-consuming. Life's too short to taste everything :/
 
