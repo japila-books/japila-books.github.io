@@ -11,6 +11,7 @@ I'm very excited to have you here and hope you will enjoy exploring the internal
 * [Spark Structured Streaming](https://jaceklaskowski.github.io/spark-structured-streaming-book/)
 * [Delta Lake](https://books.japila.pl/delta-lake-internals)
 * [Spark on Kubernetes](https://jaceklaskowski.github.io/spark-kubernetes-book/)
+* [PySpark](https://books.japila.pl/pyspark-internals)
 * [Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/content/)
 * [Kafka Streams](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/content/)
 * [Apache Beam](https://books.japila.pl/apache-beam-internals)
