@@ -31,12 +31,26 @@ Review [Dockerfile](Dockerfile) and [requirements.txt](requirements.txt) files t
 ### Build Books Docker Image
 
 ```shell
-export INSIDERS_TAG=7.0.4-insiders-2.2.1
+export INSIDERS_TAG=7.0.5-insiders-2.2.1
 docker build \
   --build-arg INSIDERS_TAG \
   --tag jaceklaskowski/mkdocs-material-insiders \
   --tag jaceklaskowski/mkdocs-material-insiders:$INSIDERS_TAG \
   .
+```
+
+You may want to delete all the earlier images (to clean up space). Pardon such convoluted commands.
+
+```shell
+docker rmi \
+  $(docker image ls 'ghcr.io/squidfunk/mkdocs-material-insiders' \
+      --filter=before=ghcr.io/squidfunk/mkdocs-material-insiders:$INSIDERS_TAG -q)
+```
+
+```shell
+docker rmi \
+  $(docker image ls 'jaceklaskowski/mkdocs-material-insiders' \
+      --filter=before=$(docker image ls 'jaceklaskowski/mkdocs-material-insiders:latest' -q) -q)
 ```
 
 **NOTE** Learn more about `docker build` command in the [official documentation of Docker](https://docs.docker.com/engine/reference/commandline/build/).
