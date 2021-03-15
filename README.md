@@ -31,7 +31,7 @@ Review [Dockerfile](Dockerfile) and [requirements.txt](requirements.txt) files t
 ### Build Books Docker Image
 
 ```shell
-export INSIDERS_TAG=7.0.5-insiders-2.2.1
+export INSIDERS_TAG=7.0.6-insiders-2.3.1
 docker build \
   --build-arg INSIDERS_TAG \
   --tag jaceklaskowski/mkdocs-material-insiders \
@@ -61,6 +61,7 @@ Use `docker run` command with `build` argument to build a book.
 
 ```shell
 docker run \
+  --rm \
   -it \
   -p 8000:8000 \
   -v ${PWD}:/docs \
@@ -76,6 +77,7 @@ Use `docker run` command with `serve` argument (with `--dirtyreload` for faster 
 
 ```shell
 docker run \
+  --rm \
   -it \
   -p 8000:8000 \
   -v ${PWD}:/docs \
