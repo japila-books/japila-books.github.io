@@ -1,4 +1,4 @@
-ARG INSIDERS_TAG=7.0.6-insiders-2.3.1
+ARG INSIDERS_TAG=7.0.6-insiders-2.4.0
 
 FROM ghcr.io/squidfunk/mkdocs-material-insiders:${INSIDERS_TAG}
 

@@ -31,7 +31,7 @@ Review [Dockerfile](Dockerfile) and [requirements.txt](requirements.txt) files t
 ### Build Books Docker Image
 
 ```shell
-export INSIDERS_TAG=7.0.6-insiders-2.3.1
+export INSIDERS_TAG=7.0.6-insiders-2.4.0
 docker build \
   --build-arg INSIDERS_TAG \
   --tag jaceklaskowski/mkdocs-material-insiders \
