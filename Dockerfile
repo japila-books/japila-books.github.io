@@ -1,6 +1,6 @@
-ARG INSIDERS_TAG=7.0.6-insiders-2.4.0
+ARG INSIDERS_TAG
 
-FROM ghcr.io/squidfunk/mkdocs-material-insiders:${INSIDERS_TAG}
+FROM squidfunk/mkdocs-material-insiders:${INSIDERS_TAG}
 
 RUN python -m pip install --upgrade pip
 RUN pip install --upgrade wheel

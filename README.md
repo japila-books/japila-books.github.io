@@ -31,7 +31,21 @@ Review [Dockerfile](Dockerfile) and [requirements.txt](requirements.txt) files t
 ### Build Books Docker Image
 
 ```shell
-export INSIDERS_TAG=7.0.6-insiders-2.4.0
+export INSIDERS_TAG=7.1.3-insiders-2.6.0
+```
+
+Execute the following command in the cloned insiders repo:
+
+```shell
+docker build \
+  --tag squidfunk/mkdocs-material-insiders \
+  --tag squidfunk/mkdocs-material-insiders:$INSIDERS_TAG \
+  .
+```
+
+Switch to the repo and execute the following command:
+
+```shell
 docker build \
   --build-arg INSIDERS_TAG \
   --tag jaceklaskowski/mkdocs-material-insiders \
