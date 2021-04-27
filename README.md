@@ -22,9 +22,9 @@ The aim of this project is to host all the current and future internals books un
 
 ## Custom Docker Image
 
-The books projects use a custom Docker image (based on the [Insiders](https://squidfunk.github.io/mkdocs-material/insiders/) image).
+The books projects use a custom Docker image.
 
-The [official Docker image](https://squidfunk.github.io/mkdocs-material/getting-started/#with-docker-recommended) does not include all plugins the books need and hence this custom image.
+The [official Docker image](https://squidfunk.github.io/mkdocs-material/getting-started/#with-docker-recommended) does not include all plugins the books need as well as is [no longer available](https://github.com/squidfunk/mkdocs-material/issues/2442).
 
 Review [Dockerfile](Dockerfile) and [requirements.txt](requirements.txt) files to learn more.
 
@@ -34,7 +34,7 @@ Review [Dockerfile](Dockerfile) and [requirements.txt](requirements.txt) files t
 export INSIDERS_TAG=7.1.3-insiders-2.6.0
 ```
 
-Execute the following command in the cloned insiders repo:
+Clone the [Material for MkDocs Insiders](https://squidfunk.github.io/mkdocs-material/insiders/) repo and execute the following command inside:
 
 ```shell
 docker build \
@@ -43,7 +43,7 @@ docker build \
   .
 ```
 
-Switch to the repo and execute the following command:
+Switch back to this repo and execute the following command:
 
 ```shell
 docker build \
@@ -97,4 +97,24 @@ docker run \
   -v ${PWD}:/docs \
   jaceklaskowski/mkdocs-material-insiders \
   serve --dirtyreload --verbose --dev-addr 0.0.0.0:8000
+```
+
+### List Outdated Packages
+
+Run an interactive shell in a container.
+
+```text
+docker run \
+  --rm \
+  -it \
+  -p 8000:8000 \
+  -v ${PWD}:/docs \
+  --entrypoint sh \
+  jaceklaskowski/mkdocs-material-insiders
+```
+
+While inside, execute the following command to list outdated packages, and show the latest version available (as described [here](https://pip.pypa.io/en/stable/user_guide/#listing-packages)).
+
+```text
+python -m pip list --outdated
 ```
