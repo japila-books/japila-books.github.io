@@ -30,11 +30,13 @@ Review [Dockerfile](Dockerfile) and [requirements.txt](requirements.txt) files t
 
 ### Build Books Docker Image
 
-```shell
-export INSIDERS_TAG=7.1.3-insiders-2.6.0
-```
+Clone or pull the latest tag of the [Material for MkDocs Insiders](https://squidfunk.github.io/mkdocs-material/insiders/) repository.
 
-Clone the [Material for MkDocs Insiders](https://squidfunk.github.io/mkdocs-material/insiders/) repo and execute the following command inside:
+In the repo directory, execute `docker build` as follows:
+
+```shell
+export INSIDERS_TAG=7.1.3-insiders-2.7.0
+```
 
 ```shell
 docker build \
@@ -43,7 +45,7 @@ docker build \
   .
 ```
 
-Switch back to this repo and execute the following command:
+Switch to this repo and execute the following command:
 
 ```shell
 docker build \
@@ -53,18 +55,20 @@ docker build \
   .
 ```
 
+#### Clean Up
+
 You may want to delete all the earlier images (to clean up space). Pardon such convoluted commands.
 
 ```shell
 docker rmi \
-  $(docker image ls 'ghcr.io/squidfunk/mkdocs-material-insiders' \
-      --filter=before=ghcr.io/squidfunk/mkdocs-material-insiders:$INSIDERS_TAG -q)
+  $(docker image ls 'squidfunk/mkdocs-material-insiders' \
+      --filter=before=squidfunk/mkdocs-material-insiders:$INSIDERS_TAG -q)
 ```
 
 ```shell
 docker rmi \
   $(docker image ls 'jaceklaskowski/mkdocs-material-insiders' \
-      --filter=before=$(docker image ls 'jaceklaskowski/mkdocs-material-insiders:latest' -q) -q)
+      --filter=before=jaceklaskowski/mkdocs-material-insiders:latest -q)
 ```
 
 **NOTE** Learn more about `docker build` command in the [official documentation of Docker](https://docs.docker.com/engine/reference/commandline/build/).
