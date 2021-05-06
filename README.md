@@ -35,7 +35,7 @@ Clone or pull the latest tag of the [Material for MkDocs Insiders](https://squid
 In the repo directory, execute `docker build` as follows:
 
 ```shell
-export INSIDERS_TAG=7.1.3-insiders-2.7.1
+export INSIDERS_TAG=7.1.4-insiders-2.7.1
 ```
 
 ```shell
