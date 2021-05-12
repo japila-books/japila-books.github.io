@@ -32,46 +32,7 @@ Review [Dockerfile](Dockerfile) and [requirements.txt](requirements.txt) files t
 
 Clone or pull the latest tag of the [Material for MkDocs Insiders](https://squidfunk.github.io/mkdocs-material/insiders/) repository.
 
-In the repo directory, execute `docker build` as follows:
-
-```shell
-export INSIDERS_TAG=7.1.4-insiders-2.7.1
-```
-
-```shell
-docker build \
-  --tag squidfunk/mkdocs-material-insiders \
-  --tag squidfunk/mkdocs-material-insiders:$INSIDERS_TAG \
-  .
-```
-
-Switch to this repo and execute the following command:
-
-```shell
-docker build \
-  --build-arg INSIDERS_TAG \
-  --tag jaceklaskowski/mkdocs-material-insiders \
-  --tag jaceklaskowski/mkdocs-material-insiders:$INSIDERS_TAG \
-  .
-```
-
-#### Clean Up
-
-You may want to delete all the earlier images (to clean up space). Pardon such convoluted commands.
-
-```shell
-docker rmi \
-  $(docker image ls 'squidfunk/mkdocs-material-insiders' \
-      --filter=before=squidfunk/mkdocs-material-insiders:$INSIDERS_TAG -q)
-```
-
-```shell
-docker rmi \
-  $(docker image ls 'jaceklaskowski/mkdocs-material-insiders' \
-      --filter=before=jaceklaskowski/mkdocs-material-insiders:latest -q)
-```
-
-**NOTE** Learn more about `docker build` command in the [official documentation of Docker](https://docs.docker.com/engine/reference/commandline/build/).
+Execute the [build-image.sh](build-image.sh) shell script to build the Docker image.
 
 ### Build Book
 
