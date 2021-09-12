@@ -12,7 +12,7 @@ I'm very excited to have you here and hope you will enjoy exploring the internal
 1. [Delta Lake](https://books.japila.pl/delta-lake-internals)
 1. [Spark on Kubernetes](https://jaceklaskowski.github.io/spark-kubernetes-book/)
 1. [PySpark](https://books.japila.pl/pyspark-internals)
-1. [Apache Kafka](https://jaceklaskowski.gitbooks.io/apache-kafka/content/)
+1. [Apache Kafka](https://books.japila.pl/kafka-internals) (previously at [gitbooks.io](https://jaceklaskowski.gitbooks.io/apache-kafka/content/))
 1. [Kafka Streams](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/content/)
 1. [Apache Beam](https://books.japila.pl/apache-beam-internals)
 
