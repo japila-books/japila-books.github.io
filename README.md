@@ -15,6 +15,7 @@ I'm very excited to have you here and hope you will enjoy exploring the internal
 1. [Apache Kafka](https://books.japila.pl/kafka-internals) (previously at [gitbooks.io](https://jaceklaskowski.gitbooks.io/apache-kafka/content/))
 1. [Kafka Streams](https://books.japila.pl/kafka-streams-internals) (previously at [gitbooks.io](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/content/))
 1. [Apache Beam](https://books.japila.pl/apache-beam-internals)
+1. [Spark Standalone](https://books.japila.pl/spark-standalone-internals)
 
 Please note that some books have less current content than others, but that's expected with a one-person project where some many things are so interesting and thus time-consuming. Life's too short to taste everything :/
 
