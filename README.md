@@ -14,6 +14,7 @@ I'm very excited to have you here and hope you will enjoy exploring the internal
 1. [PySpark](https://books.japila.pl/pyspark-internals)
 1. [Apache Kafka](https://books.japila.pl/kafka-internals) (previously at [gitbooks.io](https://jaceklaskowski.gitbooks.io/apache-kafka/content/))
 1. [Kafka Streams](https://books.japila.pl/kafka-streams-internals) (previously at [gitbooks.io](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/content/))
+1. [ksqlDB](https://books.japila.pl/ksqldb-internals)
 1. [Apache Beam](https://books.japila.pl/apache-beam-internals)
 1. [Spark Standalone](https://books.japila.pl/spark-standalone-internals)
 
