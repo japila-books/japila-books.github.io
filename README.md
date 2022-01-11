@@ -7,7 +7,7 @@ I'm [Jacek Laskowski](https://pl.linkedin.com/in/jaceklaskowski), an IT freelanc
 I'm very excited to have you here and hope you will enjoy exploring the internals of the open source projects together (in no particular order):
 
 1. [Apache Spark](https://books.japila.pl/apache-spark-internals)
-1. [Spark SQL](https://jaceklaskowski.github.io/mastering-spark-sql-book/)
+1. [Spark SQL](https://books.japila.pl/spark-sql-internals)
 1. [Spark Structured Streaming](https://jaceklaskowski.github.io/spark-structured-streaming-book/)
 1. [Delta Lake](https://books.japila.pl/delta-lake-internals)
 1. [Spark on Kubernetes](https://jaceklaskowski.github.io/spark-kubernetes-book/)

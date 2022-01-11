@@ -6,3 +6,5 @@ mkdocs-redirects>=1.0.1
 # https://github.com/fralau/mkdocs_macros_plugin/issues/86
 # Should really be mkdocs-macros-plugin>=0.5.12
 git+https://github.com/fralau/mkdocs_macros_plugin@v0.5.12#egg=mkdocs-macros-plugin
+mkdocs-include-markdown-plugin>=3.2.3
+mkdocs-mermaid2-plugin
