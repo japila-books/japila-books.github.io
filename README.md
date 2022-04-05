@@ -8,7 +8,7 @@ I'm very excited to have you here and hope you will enjoy exploring the internal
 
 1. [Apache Spark](https://books.japila.pl/apache-spark-internals)
 1. [Spark SQL](https://books.japila.pl/spark-sql-internals)
-1. [Spark Structured Streaming](https://jaceklaskowski.github.io/spark-structured-streaming-book/)
+1. [Spark Structured Streaming](https://books.japila.pl/spark-structured-streaming-internals/)
 1. [Delta Lake](https://books.japila.pl/delta-lake-internals)
 1. [Spark on Kubernetes](https://jaceklaskowski.github.io/spark-kubernetes-book/)
 1. [PySpark](https://books.japila.pl/pyspark-internals)
