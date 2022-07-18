@@ -1,10 +1,7 @@
 mkdocs-minify-plugin>=0.3.0
-mkdocs-git-revision-date-localized-plugin>=0.8
 mkdocs-git-revision-date-plugin>=0.3.1
 mkdocs-awesome-pages-plugin>=2.5.0
 mkdocs-redirects>=1.0.1
-# https://github.com/fralau/mkdocs_macros_plugin/issues/86
-# Should really be mkdocs-macros-plugin>=0.5.12
-git+https://github.com/fralau/mkdocs_macros_plugin@v0.5.12#egg=mkdocs-macros-plugin
+mkdocs-macros-plugin>=0.5.12
 mkdocs-include-markdown-plugin>=3.2.3
 mkdocs-mermaid2-plugin
