@@ -2,7 +2,7 @@
 
 Welcome to ["The Internals Of" Online Books](https://github.com/japila-books) project! 🤙
 
-I'm [Jacek Laskowski](https://pl.linkedin.com/in/jaceklaskowski), an IT freelancer specializing in [Apache Spark](https://spark.apache.org/), [Delta Lake](https://delta.io/) and [Apache Kafka](https://kafka.apache.org/) (with brief forays into a wider data engineering space, e.g. [Trino](https://trino.io/) and [ksqlDB](https://ksqldb.io/), mostly during [Warsaw Data Engineering](https://www.meetup.com/Warsaw-Data-Engineering/) meetups).
+I'm [Jacek Laskowski](https://pl.linkedin.com/in/jaceklaskowski), an IT freelancer specializing in [Apache Spark](https://books.japila.pl/apache-spark-internals/) (incl. [Spark SQL](https://books.japila.pl/spark-sql-internals/) and [Spark Structured Streaming](https://books.japila.pl/spark-structured-streaming-internals/)), [Delta Lake](https://books.japila.pl/delta-lake-internals/) and [Apache Kafka](https://books.japila.pl/kafka-internals/) (incl. [Kafka Streams](https://books.japila.pl/kafka-streams-internals/) and [ksqlDB](https://books.japila.pl/ksqldb-internals/)) (with brief forays into a wider data engineering space, e.g. [Trino](https://trino.io/), [Dask](https://www.dask.org/) and [dbt](https://www.getdbt.com/), mostly during [Warsaw Data Engineering](https://www.meetup.com/Warsaw-Data-Engineering/) meetups).
 
 I'm very excited to have you here and hope you will enjoy exploring the internals of the open source projects together (in no particular order):
 
@@ -18,7 +18,7 @@ I'm very excited to have you here and hope you will enjoy exploring the internal
 1. [Apache Beam](https://books.japila.pl/apache-beam-internals)
 1. [Spark Standalone](https://books.japila.pl/spark-standalone-internals)
 
-Please note that some books have less current content than others, but that's expected with a one-person project where some many things are so interesting and thus time-consuming. Life's too short to taste everything :/
+Please note that some books have less current content than others, but that's expected with a one-person project where so many things are truly interesting and thus time-consuming. Life's too short to taste everything :/
 
 The aim of this project is to host all the current and future internals books under a single organization on GitHub and publish to a single domain via GitHub Pages (_until I find a better way to publish the books_).
 
@@ -28,11 +28,9 @@ The books projects use a custom Docker image.
 
 The [official Docker image](https://squidfunk.github.io/mkdocs-material/getting-started/#with-docker-recommended) does not include all plugins the books need as well as is [no longer available](https://github.com/squidfunk/mkdocs-material/issues/2442).
 
-Review [Dockerfile](Dockerfile) and [requirements.txt](requirements.txt) files to learn more.
+See [build-image.sh](build-image.sh) shell script to learn more.
 
 ### Build Books Docker Image
-
-Clone or pull the latest tag of the [Material for MkDocs Insiders](https://squidfunk.github.io/mkdocs-material/insiders/) repository.
 
 Execute the [build-image.sh](build-image.sh) shell script to build the Docker image.
 
