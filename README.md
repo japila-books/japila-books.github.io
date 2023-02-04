@@ -83,3 +83,7 @@ While inside, execute the following command to list outdated packages, and show 
 ```text
 python -m pip list --outdated
 ```
+
+---
+
+<a href="https://fosstodon.org/@jaceklaskowski" rel="me">Follow @jaceklaskowski on Mastodon!</a>
