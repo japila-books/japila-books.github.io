@@ -5,12 +5,14 @@ if [ "$#" -ne 1 ]; then
     exit
 fi
 
-export INSIDERS_TAG=$1
+INSIDERS_TAG=$1
+print ">>> Building the books image with insiders tag: $INSIDERS_TAG"
 
 # Aliases
 oss () { cd ~/dev/oss }
 gco () { git checkout $1 }
 books () { cd ~/dev/books }
+
 # FIXME Command-line option to trigger it
 remove_all_images () {
   docker rmi -f $(docker image ls 'squidfunk/mkdocs-material-insiders:*' -q)
@@ -33,7 +35,7 @@ books; cd japila-books.github.io
 
 docker build \
   --no-cache \
-  --build-arg INSIDERS_TAG \
+  --build-arg INSIDERS_TAG=$INSIDERS_TAG \
   --tag jaceklaskowski/mkdocs-material-insiders \
   --tag jaceklaskowski/mkdocs-material-insiders:$INSIDERS_TAG \
   .
