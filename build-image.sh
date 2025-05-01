@@ -1,4 +1,4 @@
-#!/usr/local/bin/zsh
+#!/usr/bin/env zsh
 
 if [ "$#" -ne 1 ]; then
     echo "ERROR: INSIDERS_TAG not defined! Exiting..."
@@ -9,9 +9,9 @@ INSIDERS_TAG=$1
 print ">>> Building the books image with insiders tag: $INSIDERS_TAG"
 
 # Aliases
-oss () { cd ~/dev/oss }
+oss () { cd ~/oss }
 gco () { git checkout $1 }
-books () { cd ~/dev/books }
+books () { cd ~/books }
 
 # FIXME Command-line option to trigger it
 remove_all_images () {
@@ -20,7 +20,7 @@ remove_all_images () {
 }
 
 # In the repo directory, execute `docker build` as follows:
-oss; cd mkdocs-material; git pull; gco $INSIDERS_TAG
+oss; cd mkdocs-material-insiders; git pull; gco $INSIDERS_TAG
 
 # FIXME Command-line option to enable --no-cache
 docker build \

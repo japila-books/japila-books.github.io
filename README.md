@@ -38,7 +38,19 @@ See [build-image.sh](build-image.sh) shell script to learn more.
 
 ### Build Books Docker Image
 
+Start [Colima](https://github.com/abiosoft/colima).
+
+```bash
+colima start
+```
+
 Execute the [build-image.sh](build-image.sh) shell script to build the Docker image.
+
+```bash
+./build-image.sh [insider_tag]
+```
+
+Go to https://github.com/squidfunk/mkdocs-material-insiders/tags to find the available insiders tags.
 
 ### Build Book
 
