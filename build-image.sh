@@ -1,12 +1,12 @@
 #!/usr/bin/env zsh
 
 if [ "$#" -ne 1 ]; then
-    echo "ERROR: INSIDERS_TAG not defined! Exiting..."
+    echo "ERROR: TAG not defined! Exiting..."
     exit
 fi
 
-INSIDERS_TAG=$1
-print ">>> Building the books image with insiders tag: $INSIDERS_TAG"
+TAG=$1
+print ">>> Building the books image with insiders tag: $TAG"
 
 # Aliases
 oss () { cd ~/oss }
@@ -15,37 +15,24 @@ books () { cd ~/books }
 
 # FIXME Command-line option to trigger it
 remove_all_images () {
-  docker rmi -f $(docker image ls 'squidfunk/mkdocs-material-insiders:*' -q)
-  docker rmi -f $(docker image ls 'jaceklaskowski/mkdocs-material-insiders:*' -q)
+  docker rmi -f $(docker image ls 'squidfunk/mkdocs-material:*' -q)
+  docker rmi -f $(docker image ls 'jaceklaskowski/mkdocs-material:*' -q)
 }
-
-# Pull the given version of mkdocs-material-insiders
-oss; cd mkdocs-material-insiders; git pull; gco $INSIDERS_TAG
 
 # FIXME Command-line option to enable --no-cache
 docker build \
   --no-cache \
-  --tag squidfunk/mkdocs-material-insiders \
-  --tag squidfunk/mkdocs-material-insiders:$INSIDERS_TAG \
-  .
-
-gco master
-
-books; cd japila-books.github.io
-
-docker build \
-  --no-cache \
-  --build-arg INSIDERS_TAG=$INSIDERS_TAG \
-  --tag jaceklaskowski/mkdocs-material-insiders \
-  --tag jaceklaskowski/mkdocs-material-insiders:$INSIDERS_TAG \
+  --build-arg TAG=$TAG \
+  --tag jaceklaskowski/mkdocs-material \
+  --tag jaceklaskowski/mkdocs-material:$TAG \
   .
 
 # Clean Up
 
 docker rmi \
-  $(docker image ls 'squidfunk/mkdocs-material-insiders' \
-      --filter=before=squidfunk/mkdocs-material-insiders:$INSIDERS_TAG -q)
+  $(docker image ls 'squidfunk/mkdocs-material' \
+      --filter=before=squidfunk/mkdocs-material:$TAG -q)
 
 docker rmi \
-  $(docker image ls 'jaceklaskowski/mkdocs-material-insiders' \
-      --filter=before=jaceklaskowski/mkdocs-material-insiders:latest -q)
+  $(docker image ls 'jaceklaskowski/mkdocs-material' \
+      --filter=before=jaceklaskowski/mkdocs-material:latest -q)

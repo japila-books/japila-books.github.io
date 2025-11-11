@@ -1,11 +1,10 @@
-ARG INSIDERS_TAG
+ARG TAG
 
-FROM squidfunk/mkdocs-material-insiders:${INSIDERS_TAG}
+FROM squidfunk/mkdocs-material:${TAG}
 
 RUN <<-EOF
-    echo Insider tag: $INSIDERS_TAG
-    python -m pip install --upgrade pip
-    pip install --upgrade wheel
+    echo mkdocs-material tag: $TAG
+    pip install --upgrade pip wheel setuptools
 EOF
 
 COPY requirements.txt .

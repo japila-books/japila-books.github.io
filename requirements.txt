@@ -1,3 +1,5 @@
+# hot reloading does not work with click 8.3.0+
+click<8.3.0
 mkdocs-minify-plugin>=0.7.2
 mkdocs-git-revision-date-localized-plugin>=1.2.2
 mkdocs-git-revision-date-plugin>=0.3.2

@@ -2,11 +2,15 @@
 
 Welcome to ["The Internals Of" Online Books](https://github.com/japila-books) project! 🤙
 
-I'm [Jacek Laskowski](https://pl.linkedin.com/in/jaceklaskowski), a Freelance Data(bricks) Engineer specializing in
+I'm [Jacek Laskowski](https://pl.linkedin.com/in/jaceklaskowski), a Freelance Data Engineer 🧱
+specializing in
 [Apache Spark](https://books.japila.pl/apache-spark-internals/) (incl. [Spark SQL](https://books.japila.pl/spark-sql-internals/) and [Spark Structured Streaming](https://books.japila.pl/spark-structured-streaming-internals/)),
 [Delta Lake](https://books.japila.pl/delta-lake-internals/),
-[Databricks](https://www.databricks.com/),
-and [Apache Kafka](https://books.japila.pl/kafka-internals/) (incl. [Kafka Streams](https://books.japila.pl/kafka-streams-internals/)) with brief forays into a wider data engineering space (e.g., [Trino](https://trino.io/), [Dask](https://www.dask.org/) and [dbt](https://www.getdbt.com/), mostly during [Warsaw Data Engineering](https://www.meetup.com/Warsaw-Data-Engineering/) meetups).
+[Unity Catalog](https://books.japila.pl/unity-catalog-internals/),
+[MLflow](https://mlflow.org/),
+[DSPy](https://dspy.ai/),
+[Databricks](https://github.com/jaceklaskowski/learn-databricks)
+with brief forays into a wider data engineering space (mostly during [Warsaw Data Engineering](https://www.meetup.com/Warsaw-Data-Engineering/) meetups).
 
 I'm very excited to have you here and hope you will enjoy exploring the internals of the open source projects together (in no particular order):
 
@@ -30,11 +34,11 @@ The aim of this project is to host all the current and future internals books un
 
 ## Custom Docker Image
 
-The books projects use a custom Docker image.
+The japila-books project uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) documentation framework.
 
-The [official Docker image](https://squidfunk.github.io/mkdocs-material/getting-started/#with-docker-recommended) does not include all plugins the books need as well as is [no longer available](https://github.com/squidfunk/mkdocs-material/issues/2442).
+The book projects use a custom Docker image.
 
-See [build-image.sh](build-image.sh) shell script to learn more.
+Use [build-image.sh](build-image.sh) shell script to build the custom Docker image.
 
 ### Build Books Docker Image
 
@@ -47,14 +51,12 @@ colima start
 Execute the [build-image.sh](build-image.sh) shell script to build the Docker image.
 
 ```bash
-./build-image.sh [insider_tag]
+./build-image.sh [version_tag]
 ```
 
-Go to https://github.com/squidfunk/mkdocs-material-insiders/tags to find the available insiders tags.
+Go to <https://github.com/squidfunk/mkdocs-material/tags> to find the available insiders tags.
 
-### Build Book
-
-Use `docker run` command with `build` argument to build a book.
+## Build Book
 
 ```shell
 docker run \
@@ -62,7 +64,7 @@ docker run \
   -it \
   -p 8000:8000 \
   -v ${PWD}:/docs \
-  jaceklaskowski/mkdocs-material-insiders \
+  jaceklaskowski/mkdocs-material \
   build --clean
 ```
 
@@ -78,7 +80,7 @@ docker run \
   -it \
   -p 8000:8000 \
   -v ${PWD}:/docs \
-  jaceklaskowski/mkdocs-material-insiders \
+  jaceklaskowski/mkdocs-material \
   serve --dirtyreload --verbose --dev-addr 0.0.0.0:8000
 ```
 
@@ -86,22 +88,18 @@ docker run \
 
 Run an interactive shell in a container.
 
-```text
+```shell
 docker run \
   --rm \
   -it \
   -p 8000:8000 \
   -v ${PWD}:/docs \
   --entrypoint sh \
-  jaceklaskowski/mkdocs-material-insiders
+  jaceklaskowski/mkdocs-material
 ```
 
 While inside, execute the following command to list outdated packages, and show the latest version available (as described [here](https://pip.pypa.io/en/stable/user_guide/#listing-packages)).
 
-```text
-python -m pip list --outdated
+```shell
+pip list --outdated
 ```
-
----
-
-<a href="https://fosstodon.org/@jaceklaskowski" rel="me">Follow @jaceklaskowski on Mastodon!</a>
