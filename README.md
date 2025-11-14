@@ -32,15 +32,15 @@ Please note that some books have less current content than others, but that's ex
 
 The aim of this project is to host all the current and future internals books under a single organization on GitHub and publish to a single domain via GitHub Pages (_until I find a better way to publish the books_).
 
-## Custom Docker Image
+## Custom Books Docker Image
 
-The japila-books project uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) documentation framework.
+The japila-books project uses [Zensical](https://zensical.org/) documentation framework.
 
-The book projects use a custom Docker image.
+The book projects use a custom Docker image to install extra plugins.
 
 Use [build-image.sh](build-image.sh) shell script to build the custom Docker image.
 
-### Build Books Docker Image
+### Build Image
 
 Start [Colima](https://github.com/abiosoft/colima).
 
@@ -51,10 +51,8 @@ colima start
 Execute the [build-image.sh](build-image.sh) shell script to build the Docker image.
 
 ```bash
-./build-image.sh [version_tag]
+./build-image.sh
 ```
-
-Go to <https://github.com/squidfunk/mkdocs-material/tags> to find the available insiders tags.
 
 ## Build Book
 
@@ -64,15 +62,13 @@ docker run \
   -it \
   -p 8000:8000 \
   -v ${PWD}:/docs \
-  jaceklaskowski/mkdocs-material \
+  jaceklaskowski/zensical \
   build --clean
 ```
 
-**TIP:** Consult the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/creating-your-site/) documentation to get started.
+## Live Editing
 
-### Live Editing
-
-Use `docker run` command with `serve` argument (with `--dirtyreload` for faster reloads) in the project root (the folder with [mkdocs.yml](mkdocs.yml)).
+Use `docker run` command in the project root (the folder with [zensical.yml](zensical.yml)).
 
 ```shell
 docker run \
@@ -80,11 +76,10 @@ docker run \
   -it \
   -p 8000:8000 \
   -v ${PWD}:/docs \
-  jaceklaskowski/mkdocs-material \
-  serve --dirtyreload --verbose --dev-addr 0.0.0.0:8000
+  jaceklaskowski/zensical
 ```
 
-### List Outdated Packages
+## List Outdated Packages
 
 Run an interactive shell in a container.
 
@@ -95,7 +90,7 @@ docker run \
   -p 8000:8000 \
   -v ${PWD}:/docs \
   --entrypoint sh \
-  jaceklaskowski/mkdocs-material
+  jaceklaskowski/zensical
 ```
 
 While inside, execute the following command to list outdated packages, and show the latest version available (as described [here](https://pip.pypa.io/en/stable/user_guide/#listing-packages)).

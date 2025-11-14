@@ -1,12 +1,9 @@
-ARG TAG
+FROM astral/uv:python3.14-trixie
 
-FROM squidfunk/mkdocs-material:${TAG}
+WORKDIR /docs
 
-RUN <<-EOF
-    echo mkdocs-material tag: $TAG
-    pip install --upgrade pip wheel setuptools
-EOF
+COPY pyproject.toml uv.lock ./
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN uv pip install --system .
 
+CMD ["zensical", "serve", "--config-file", "mkdocs.yml", "--dev-addr", "0.0.0.0:8000"]
