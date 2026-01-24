@@ -1,20 +1,21 @@
 # The Internals Online Books
 
-Welcome to ["The Internals Of" Online Books](https://github.com/japila-books) project! 🤙
+Welcome to ["The Internals Of" Online Books](https://books.japila.pl/) project! 🤙
 
 I'm [Jacek Laskowski](https://pl.linkedin.com/in/jaceklaskowski), a Freelance Data Engineer 🧱
 specializing in
 [Apache Spark](https://books.japila.pl/apache-spark-internals/) (incl. [Spark SQL](https://books.japila.pl/spark-sql-internals/) and [Spark Structured Streaming](https://books.japila.pl/spark-structured-streaming-internals/)),
 [Delta Lake](https://books.japila.pl/delta-lake-internals/),
 [Unity Catalog](https://books.japila.pl/unity-catalog-internals/),
-[MLflow](https://mlflow.org/),
-[DSPy](https://dspy.ai/),
+[MLflow](https://mlflow.org/ambassadors),
+[DSPy](https://dspy.ai),
 [Databricks](https://github.com/jaceklaskowski/learn-databricks)
-with brief forays into a wider data engineering space (mostly during [Warsaw Data Engineering](https://www.meetup.com/Warsaw-Data-Engineering/) meetups).
+with brief forays into a wider Data, ML and AI Engineering space (mostly during [Warsaw Data Engineering](https://www.meetup.com/Warsaw-Data-Engineering/) meetups).
 
 I'm very excited to have you here and hope you will enjoy exploring the internals of the open source projects together (in no particular order):
 
 1. [Apache Spark](https://books.japila.pl/apache-spark-internals)
+1. [Spark Declarative Pipelines](https://books.japila.pl/spark-declarative-pipelines)
 1. [Spark SQL](https://books.japila.pl/spark-sql-internals)
 1. [Unity Catalog](https://books.japila.pl/unity-catalog-internals/)
 1. [Spark Connect](https://books.japila.pl/spark-connect-internals)
@@ -22,11 +23,8 @@ I'm very excited to have you here and hope you will enjoy exploring the internal
 1. [Delta Lake](https://books.japila.pl/delta-lake-internals)
 1. [Spark on Kubernetes](https://jaceklaskowski.github.io/spark-kubernetes-book/)
 1. [PySpark](https://books.japila.pl/pyspark-internals)
-1. [Apache Kafka](https://books.japila.pl/kafka-internals) (previously at [gitbooks.io](https://jaceklaskowski.gitbooks.io/apache-kafka/content/))
-1. [Kafka Streams](https://books.japila.pl/kafka-streams-internals) (previously at [gitbooks.io](https://jaceklaskowski.gitbooks.io/mastering-kafka-streams/content/))
-1. [ksqlDB](https://books.japila.pl/ksqldb-internals) (no longer maintained)
-1. [Apache Beam](https://books.japila.pl/apache-beam-internals) (no longer maintained)
-1. [Spark Standalone](https://books.japila.pl/spark-standalone-internals) (no longer maintained)
+1. [Apache Kafka](https://books.japila.pl/kafka-internals)
+1. [Kafka Streams](https://books.japila.pl/kafka-streams-internals)
 
 Please note that some books have less current content than others, but that's expected with a one-person project where so many things are truly interesting and thus time-consuming. Life's too short to taste everything :/
 
