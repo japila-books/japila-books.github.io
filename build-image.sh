@@ -1,12 +1,22 @@
 #!/usr/bin/env zsh
 
-if [ "$#" -ne 1 ]; then
-    echo "ERROR: TAG not defined! Exiting..."
-    exit
+# Parse command-line arguments
+if [[ "$1" == "-l" || "$1" == "--list" ]]; then
+  print ">>> Available squidfunk/mkdocs-material images:"
+  docker image ls squidfunk/mkdocs-material
+  exit 0
+fi
+
+if [[ -z "$1" ]]; then
+  print "Error: TAG is required"
+  print "Usage: $0 <tag>"
+  print "       $0 -l|--list    List available squidfunk/mkdocs-material images"
+  exit 1
 fi
 
 TAG=$1
-print ">>> Building the books image with insiders tag: $TAG"
+
+print ">>> Building the books image with tag: $TAG"
 
 # Aliases
 oss () { cd ~/oss }
@@ -27,7 +37,7 @@ docker build \
   --tag jaceklaskowski/mkdocs-material:$TAG \
   .
 
-# Clean Up
+print "Cleaning up"
 
 docker rmi \
   $(docker image ls 'squidfunk/mkdocs-material' \
