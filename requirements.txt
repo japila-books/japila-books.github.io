@@ -5,3 +5,6 @@ mkdocs-git-revision-date-plugin>=0.3.2
 mkdocs-awesome-nav>=3.3.0
 mkdocs-redirects>=1.2.1
 mkdocs-macros-plugin>=1.0.5
+# Pinned click to avoid issues with autoreload
+# https://github.com/squidfunk/mkdocs-material/issues/8478
+click==8.2.1
