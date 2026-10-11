@@ -101,3 +101,39 @@ While inside, execute the following command to list outdated packages, and show 
 ```shell
 pip list --outdated
 ```
+
+## Sync Versions
+
+Use [scripts/sync-version.py](scripts/sync-version.py) to bump the version of the project a book is about (e.g., `extra.spark.version` in `mkdocs.yml`) and sync the dependency versions (`extra.*`) from a local git checkout of that project.
+
+Execute the script in the book project root (the folder with `mkdocs.yml`).
+
+```shell
+../japila-books.github.io/scripts/sync-version.py v4.2.0 ~/oss/spark
+```
+
+Use `--dry-run` to print the changes without writing `mkdocs.yml`, and `--latest` (in place of the version) to use the latest release of the project.
+
+```shell
+../japila-books.github.io/scripts/sync-version.py --latest ~/oss/spark --dry-run
+```
+
+A book can fine-tune the sync with an optional `scripts/sync-version.json` config (e.g., to pick the highest of several matching versions or to build URLs from a version). Use `--help` for the details.
+
+## Tag Release
+
+Use [scripts/tag-release.sh](scripts/tag-release.sh) to create a git tag matching the version of the project a book is about (e.g., `extra.spark.version` in `mkdocs.yml`) and push it to `origin`.
+
+Execute the script in the book project (`mkdocs.yml` is looked up in the current directory and its parents).
+
+```shell
+../japila-books.github.io/scripts/tag-release.sh
+```
+
+The project is auto-detected as the `extra.<key>` block in `mkdocs.yml` with a `version` and a `github: https://github.com/<org>/<repo>/blob/<ref>` field (e.g., `extra.spark`, `extra.delta`, `extra.uc`). Use `--key` to pick one explicitly and `--yes` to skip the confirmation prompt.
+
+```shell
+../japila-books.github.io/scripts/tag-release.sh --key spark --yes
+```
+
+The script requires [yq](https://github.com/mikefarah/yq).
